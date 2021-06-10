@@ -1,0 +1,121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab48ef9de5712c440bd0e1f505d00e04, type: 3}
+  m_Name: Pickup
+  m_EditorClassIdentifier: 
+  m_Parameters:
+  - m_Name: agent
+    m_RequiredTraits:
+    - {fileID: 11400000, guid: 8b3759101e3fec24ba7696a474ae0264, type: 2}
+    - {fileID: 11400000, guid: 6b7c2cd8001b84552891cf17ebf8b587, type: 2}
+    m_ProhibitedTraits: []
+    m_LimitCount: 0
+    m_LimitComparerType: 
+    m_LimitComparerReference: 
+  - m_Name: wooddispenser
+    m_RequiredTraits:
+    - {fileID: 11400000, guid: 9f2dba0893a47d64fadebdcbd40aa663, type: 2}
+    - {fileID: 11400000, guid: 6b7c2cd8001b84552891cf17ebf8b587, type: 2}
+    m_ProhibitedTraits: []
+    m_LimitCount: 0
+    m_LimitComparerType: 
+    m_LimitComparerReference: 
+  - m_Name: inventory
+    m_RequiredTraits:
+    - {fileID: 11400000, guid: e696b23394df12040832f9addef1c9b1, type: 2}
+    m_ProhibitedTraits: []
+    m_LimitCount: 0
+    m_LimitComparerType: 
+    m_LimitComparerReference: 
+  - m_Name: time
+    m_RequiredTraits:
+    - {fileID: 11400000, guid: 55de92d71b3edf94e8baf5841ba0504e, type: 2}
+    m_ProhibitedTraits: []
+    m_LimitCount: 0
+    m_LimitComparerType: 
+    m_LimitComparerReference: 
+  m_Preconditions:
+  - m_Operator: ==
+    m_CustomOperatorType: 
+    m_OperandA:
+      m_Parameter: agent
+      m_Trait: {fileID: 11400000, guid: 6b7c2cd8001b84552891cf17ebf8b587, type: 2}
+      m_TraitPropertyId: 0
+      m_Enum: {fileID: 0}
+      m_Value: 
+    m_OperandB:
+      m_Parameter: wooddispenser
+      m_Trait: {fileID: 11400000, guid: 6b7c2cd8001b84552891cf17ebf8b587, type: 2}
+      m_TraitPropertyId: 0
+      m_Enum: {fileID: 0}
+      m_Value: 
+  - m_Operator: ==
+    m_CustomOperatorType: 
+    m_OperandA:
+      m_Parameter: wooddispenser
+      m_Trait: {fileID: 11400000, guid: 9f2dba0893a47d64fadebdcbd40aa663, type: 2}
+      m_TraitPropertyId: 0
+      m_Enum: {fileID: 0}
+      m_Value: 
+    m_OperandB:
+      m_Parameter: 
+      m_Trait: {fileID: 0}
+      m_TraitPropertyId: -1
+      m_Enum: {fileID: 11400000, guid: 3c160284129dea04ba07b040a96d4bcc, type: 2}
+      m_Value: Wood
+  - m_Operator: <
+    m_CustomOperatorType: 
+    m_OperandA:
+      m_Parameter: inventory
+      m_Trait: {fileID: 11400000, guid: e696b23394df12040832f9addef1c9b1, type: 2}
+      m_TraitPropertyId: 10
+      m_Enum: {fileID: 0}
+      m_Value: 
+    m_OperandB:
+      m_Parameter: 
+      m_Trait: {fileID: 0}
+      m_TraitPropertyId: -1
+      m_Enum: {fileID: 0}
+      m_Value: 100
+  m_CreatedObjects: []
+  m_RemovedObjects: []
+  m_ObjectModifiers:
+  - m_Operator: +=
+    m_CustomOperatorType: 
+    m_OperandA:
+      m_Parameter: inventory
+      m_Trait: {fileID: 11400000, guid: e696b23394df12040832f9addef1c9b1, type: 2}
+      m_TraitPropertyId: 10
+      m_Enum: {fileID: 0}
+      m_Value: 
+    m_OperandB:
+      m_Parameter: 
+      m_Trait: {fileID: 0}
+      m_TraitPropertyId: -1
+      m_Enum: {fileID: 0}
+      m_Value: 10
+  - m_Operator: +=
+    m_CustomOperatorType: 
+    m_OperandA:
+      m_Parameter: time
+      m_Trait: {fileID: 11400000, guid: 55de92d71b3edf94e8baf5841ba0504e, type: 2}
+      m_TraitPropertyId: 0
+      m_Enum: {fileID: 0}
+      m_Value: 
+    m_OperandB:
+      m_Parameter: 
+      m_Trait: {fileID: 0}
+      m_TraitPropertyId: -1
+      m_Enum: {fileID: 0}
+      m_Value: 1
+  m_Reward: 1
+  m_CustomRewards: []
